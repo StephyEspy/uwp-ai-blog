@@ -1,4 +1,34 @@
 :root {
+  color-scheme: dark;
+  --paper: #111817;
+  --paper-soft: #182120;
+  --ink: #f4eadc;
+  --ink-muted: #bac7c1;
+  --line: #334541;
+  --green: #3fafa4;
+  --green-dark: #8bd8cf;
+  --rust: #d66b4f;
+  --gold: #e0b866;
+  --white: #ffffff;
+  --glow: rgba(224, 184, 102, 0.13);
+  --grid-line: rgba(244, 234, 220, 0.045);
+  --header-line: rgba(244, 234, 220, 0.11);
+  --nav-bg: rgba(24, 33, 32, 0.84);
+  --nav-active-bg: #f4eadc;
+  --nav-active-text: #111817;
+  --card-bg: rgba(255, 255, 255, 0.055);
+  --soft-fill: rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(244, 234, 220, 0.14);
+  --inverse-bg: #f4eadc;
+  --inverse-text: #111817;
+  --button-secondary-bg: rgba(255, 255, 255, 0.065);
+  --shadow: 0 22px 60px rgba(0, 0, 0, 0.34);
+  --max-width: 1180px;
+  --article-width: 760px;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
   --paper: #f5efe4;
   --paper-soft: #fbf7ee;
   --ink: #1f2a2e;
@@ -8,10 +38,19 @@
   --green-dark: #215c57;
   --rust: #c95b3e;
   --gold: #d8a34a;
-  --white: #ffffff;
+  --glow: rgba(216, 163, 74, 0.18);
+  --grid-line: rgba(31, 42, 46, 0.035);
+  --header-line: rgba(31, 42, 46, 0.08);
+  --nav-bg: rgba(245, 239, 228, 0.82);
+  --nav-active-bg: #1f2a2e;
+  --nav-active-text: #f5efe4;
+  --card-bg: rgba(255, 255, 255, 0.48);
+  --soft-fill: rgba(255, 255, 255, 0.62);
+  --border-subtle: rgba(31, 42, 46, 0.13);
+  --inverse-bg: #1f2a2e;
+  --inverse-text: #f5efe4;
+  --button-secondary-bg: rgba(255, 255, 255, 0.42);
   --shadow: 0 22px 60px rgba(31, 42, 46, 0.14);
-  --max-width: 1180px;
-  --article-width: 760px;
 }
 
 * {
@@ -25,7 +64,7 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(216, 163, 74, 0.18), transparent 32rem),
+    radial-gradient(circle at top left, var(--glow), transparent 32rem),
     linear-gradient(180deg, var(--paper) 0%, var(--paper-soft) 100%);
   color: var(--ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -39,8 +78,8 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(31, 42, 46, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(31, 42, 46, 0.035) 1px, transparent 1px);
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 44px 44px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent 70%);
 }
@@ -66,8 +105,8 @@ button:focus-visible {
   top: 0.75rem;
   z-index: 100;
   transform: translateY(-150%);
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--inverse-bg);
+  color: var(--inverse-text);
   padding: 0.7rem 1rem;
   border-radius: 999px;
   text-decoration: none;
@@ -93,7 +132,7 @@ button:focus-visible {
 }
 
 .site-header.is-scrolled {
-  border-bottom: 1px solid rgba(31, 42, 46, 0.08);
+  border-bottom: 1px solid var(--header-line);
 }
 
 .site-logo {
@@ -107,17 +146,10 @@ button:focus-visible {
   text-decoration: none;
 }
 
-.logo-mark {
-  display: inline-grid;
-  place-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-  background: var(--ink);
-  color: var(--paper);
-  font-size: 0.78rem;
-  font-weight: 900;
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
 }
 
 .site-nav {
@@ -125,10 +157,10 @@ button:focus-visible {
   align-items: center;
   gap: 0.35rem;
   padding: 0.35rem;
-  border: 1px solid rgba(31, 42, 46, 0.12);
+  border: 1px solid var(--border-subtle);
   border-radius: 999px;
-  background: rgba(245, 239, 228, 0.78);
-  box-shadow: 0 12px 34px rgba(31, 42, 46, 0.08);
+  background: var(--nav-bg);
+  box-shadow: var(--shadow);
 }
 
 .site-nav a {
@@ -146,8 +178,43 @@ button:focus-visible {
 
 .site-nav a:hover,
 .site-nav a.is-active {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--nav-active-bg);
+  color: var(--nav-active-text);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.9rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  background: var(--button-secondary-bg);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 800;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--gold);
+}
+
+.theme-toggle-icon {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: inset -0.32rem -0.22rem 0 var(--paper);
+}
+
+[data-theme="light"] .theme-toggle-icon {
+  box-shadow: 0 0 0 0.22rem rgba(216, 163, 74, 0.24);
 }
 
 .reading-progress {
@@ -228,7 +295,7 @@ button:focus-visible {
   justify-content: center;
   min-height: 3rem;
   padding: 0.8rem 1.15rem;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--border-subtle);
   border-radius: 999px;
   font-weight: 800;
   text-decoration: none;
@@ -237,16 +304,16 @@ button:focus-visible {
 
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(31, 42, 46, 0.12);
+  box-shadow: var(--shadow);
 }
 
 .button.primary {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--inverse-bg);
+  color: var(--inverse-text);
 }
 
 .button.secondary {
-  background: rgba(255, 255, 255, 0.42);
+  background: var(--button-secondary-bg);
   color: var(--ink);
 }
 
@@ -256,7 +323,7 @@ button:focus-visible {
 
 .hero-visual img {
   width: 100%;
-  border: 1px solid rgba(31, 42, 46, 0.12);
+  border: 1px solid var(--border-subtle);
   border-radius: 1.5rem;
   box-shadow: var(--shadow);
 }
@@ -309,14 +376,14 @@ button:focus-visible {
 
 .argument-note {
   padding: 1.25rem;
-  border: 1px solid rgba(31, 42, 46, 0.14);
+  border: 1px solid var(--border-subtle);
   border-radius: 0.5rem;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--inverse-bg);
+  color: var(--inverse-text);
 }
 
 .argument-note p {
-  color: var(--paper);
+  color: var(--inverse-text);
 }
 
 .argument-note .note-label {
@@ -344,10 +411,10 @@ button:focus-visible {
 .post-card,
 .source-grid article,
 .list-card {
-  border: 1px solid rgba(31, 42, 46, 0.13);
+  border: 1px solid var(--border-subtle);
   border-radius: 0.5rem;
-  background: rgba(255, 255, 255, 0.48);
-  box-shadow: 0 16px 36px rgba(31, 42, 46, 0.08);
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
 }
 
 .post-card {
@@ -410,8 +477,8 @@ button:focus-visible {
   min-height: 13rem;
   padding: 1rem;
   border-top: 4px solid var(--green);
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--inverse-bg);
+  color: var(--inverse-text);
   counter-increment: questions;
 }
 
@@ -508,7 +575,7 @@ button:focus-visible {
   margin: 0 0 1.8rem;
   padding: 1rem 1.1rem;
   border-left: 5px solid var(--rust);
-  background: rgba(255, 255, 255, 0.62);
+  background: var(--soft-fill);
   color: var(--ink);
   font-weight: 750;
 }
@@ -530,8 +597,8 @@ button:focus-visible {
   margin: 2rem 0;
   padding: 1.1rem 1.3rem;
   border-left: 5px solid var(--green);
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--inverse-bg);
+  color: var(--inverse-text);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.5rem;
   line-height: 1.3;
@@ -557,10 +624,20 @@ button:focus-visible {
     flex-direction: column;
   }
 
+  .header-actions {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+  }
+
   .site-nav {
     width: 100%;
     overflow-x: auto;
     border-radius: 0.5rem;
+  }
+
+  .theme-toggle {
+    width: fit-content;
   }
 
   .site-nav a {
@@ -660,5 +737,23 @@ button:focus-visible {
 
   .list-card {
     display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .button:hover {
+    transform: none;
   }
 }

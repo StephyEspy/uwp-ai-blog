@@ -1,4 +1,4 @@
-# The New Compiler
+# UWP AI Blog
 
 A self-coded static UWP research blog about AI preparedness in undergraduate computer science education.
 

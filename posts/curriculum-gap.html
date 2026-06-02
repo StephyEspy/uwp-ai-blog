@@ -7,23 +7,35 @@
     name="description"
     content="A draft post on the gap between undergraduate CS curriculum and AI-assisted software practice."
   />
-  <title>The Curriculum Gap | The New Compiler</title>
+  <title>The Curriculum Gap | AI Preparedness in CS Education</title>
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem("uwp-ai-theme") || "dark";
+    } catch (error) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
   <link rel="stylesheet" href="../styles/main.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
-    <a class="site-logo" href="../index.html" aria-label="The New Compiler home">
-      <span class="logo-mark" aria-hidden="true">NC</span>
-      <span>The New Compiler</span>
+    <a class="site-logo" href="../index.html" aria-label="UWP AI Blog home">
+      <span>UWP AI Blog</span>
     </a>
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="../index.html">Home</a>
-      <a href="./index.html">Posts</a>
-      <a href="./ai-preparedness.html">Featured</a>
-      <a href="../index.html#about">About</a>
-    </nav>
+    <div class="header-actions">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="./index.html">Posts</a>
+        <a href="./ai-preparedness.html">Featured</a>
+        <a href="../index.html#about">About</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+        <span class="theme-toggle-text">Light</span>
+      </button>
+    </div>
   </header>
 
   <div class="reading-progress" aria-hidden="true">
@@ -95,7 +107,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>The New Compiler. Built as a static GitHub Pages project.</p>
+    <p>UWP AI Blog. Built as a static GitHub Pages class project.</p>
     <a href="../index.html">Back home</a>
   </footer>
 
