@@ -1,0 +1,34 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AI curriculum map</title>
+  <desc id="desc">An abstract editorial diagram connecting code, ethics, courses, and AI practice.</desc>
+  <rect width="960" height="720" rx="28" fill="#1F2A2E"/>
+  <path d="M120 136H768C799.48 136 825 161.52 825 193V552C825 583.48 799.48 609 768 609H120C88.5198 609 63 583.48 63 552V193C63 161.52 88.5198 136 120 136Z" fill="#F5EFE4"/>
+  <path d="M119 195H770" stroke="#253238" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="144" cy="166" r="13" fill="#C95B3E"/>
+  <circle cx="183" cy="166" r="13" fill="#D8A34A"/>
+  <circle cx="222" cy="166" r="13" fill="#2E7D76"/>
+  <rect x="118" y="255" width="226" height="68" rx="12" fill="#253238"/>
+  <rect x="118" y="358" width="226" height="68" rx="12" fill="#D8A34A"/>
+  <rect x="118" y="461" width="226" height="68" rx="12" fill="#DDE7DD"/>
+  <rect x="514" y="255" width="226" height="68" rx="12" fill="#DDE7DD"/>
+  <rect x="514" y="358" width="226" height="68" rx="12" fill="#253238"/>
+  <rect x="514" y="461" width="226" height="68" rx="12" fill="#C95B3E"/>
+  <path d="M348 289H506" stroke="#2E7D76" stroke-width="9" stroke-linecap="round"/>
+  <path d="M348 392H506" stroke="#2E7D76" stroke-width="9" stroke-linecap="round"/>
+  <path d="M348 495H506" stroke="#2E7D76" stroke-width="9" stroke-linecap="round"/>
+  <path d="M427 289V495" stroke="#2E7D76" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="427" cy="392" r="53" fill="#F5EFE4" stroke="#253238" stroke-width="10"/>
+  <path d="M396 392C396 374.879 409.879 361 427 361C444.121 361 458 374.879 458 392C458 409.121 444.121 423 427 423C409.879 423 396 409.121 396 392Z" fill="#2E7D76"/>
+  <path d="M162 289H298" stroke="#F5EFE4" stroke-width="10" stroke-linecap="round"/>
+  <path d="M162 392H286" stroke="#253238" stroke-width="10" stroke-linecap="round"/>
+  <path d="M162 495H306" stroke="#253238" stroke-width="10" stroke-linecap="round"/>
+  <path d="M558 289H694" stroke="#253238" stroke-width="10" stroke-linecap="round"/>
+  <path d="M558 392H694" stroke="#F5EFE4" stroke-width="10" stroke-linecap="round"/>
+  <path d="M558 495H682" stroke="#F5EFE4" stroke-width="10" stroke-linecap="round"/>
+  <path d="M683 113L763 70L752 161L830 191L742 218L724 308L682 227L590 239L655 177L627 92L683 113Z" fill="#D8A34A"/>
+  <path d="M828 446C879.915 446 922 488.085 922 540C922 591.915 879.915 634 828 634C776.085 634 734 591.915 734 540C734 488.085 776.085 446 828 446Z" fill="#2E7D76"/>
+  <path d="M792 540H864" stroke="#F5EFE4" stroke-width="12" stroke-linecap="round"/>
+  <path d="M828 504V576" stroke="#F5EFE4" stroke-width="12" stroke-linecap="round"/>
+  <path d="M56 72C92.4508 72 122 101.549 122 138C122 174.451 92.4508 204 56 204C19.5492 204 -10 174.451 -10 138C-10 101.549 19.5492 72 56 72Z" fill="#C95B3E"/>
+  <path d="M36 138H76" stroke="#F5EFE4" stroke-width="10" stroke-linecap="round"/>
+</svg>
