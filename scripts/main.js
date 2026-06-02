@@ -5,6 +5,7 @@
   const progressBar = document.querySelector(".reading-progress span");
   const header = document.querySelector(".site-header");
   const themeToggle = document.querySelector(".theme-toggle");
+  const themeToggleIcon = document.querySelector(".theme-toggle-icon");
   const themeToggleText = document.querySelector(".theme-toggle-text");
 
   function getStoredTheme() {
@@ -27,6 +28,7 @@
     const activeTheme = theme === "light" ? "light" : "dark";
     const nextTheme = activeTheme === "dark" ? "light" : "dark";
     const nextLabel = nextTheme === "light" ? "Light" : "Dark";
+    const nextIcon = nextTheme === "light" ? "☀" : "☾";
 
     root.dataset.theme = activeTheme;
 
@@ -39,6 +41,10 @@
       themeToggleText.textContent = nextLabel;
     }
 
+    if (themeToggleIcon) {
+      themeToggleIcon.textContent = nextIcon;
+    }
+
     if (shouldPersist) {
       storeTheme(activeTheme);
     }
@@ -48,16 +54,47 @@
     return pathname.replace(/\/index\.html$/, "/").replace(/\/$/, "");
   }
 
+  function getRootPath() {
+    const rootLink = document.querySelector(".site-logo");
+    return rootLink ? normalizePath(new URL(rootLink.href).pathname) : normalizePath(window.location.pathname);
+  }
+
+  function getActiveHash() {
+    const sectionIds = ["featured", "posts", "about"];
+    const visibleSections = sectionIds
+      .map((id) => {
+        const section = document.getElementById(id);
+        return section ? { id, top: section.getBoundingClientRect().top } : null;
+      })
+      .filter(Boolean);
+
+    if (!visibleSections.length) {
+      return "";
+    }
+
+    const activeSection = visibleSections.reduce((current, section) => {
+      if (section.top <= 120) {
+        return section;
+      }
+      return current;
+    }, visibleSections[0]);
+
+    return `#${activeSection.id}`;
+  }
+
   function markActiveNav() {
     const currentPath = normalizePath(window.location.pathname);
+    const rootPath = getRootPath();
+    const activeHash = currentPath === rootPath ? getActiveHash() : "";
 
     navLinks.forEach((link) => {
       const linkPath = normalizePath(new URL(link.href).pathname);
-      const isHashOnly = link.hash && linkPath === currentPath;
-      const isActive = !isHashOnly && linkPath === currentPath;
+      const isSectionLink = activeHash && linkPath === currentPath && link.hash === activeHash;
+      const isPostsArea = currentPath.includes("/posts") && link.textContent.trim() === "Posts";
+      const isActive = isSectionLink || isPostsArea || (!link.hash && linkPath === currentPath);
       link.classList.toggle("is-active", isActive);
       if (isActive) {
-        link.setAttribute("aria-current", "page");
+        link.setAttribute("aria-current", link.hash ? "location" : "page");
       } else {
         link.removeAttribute("aria-current");
       }
@@ -76,6 +113,8 @@
     if (header) {
       header.classList.toggle("is-scrolled", scrollTop > 12);
     }
+
+    markActiveNav();
   }
 
   setTheme(getStoredTheme() || root.dataset.theme || "dark", false);
@@ -86,7 +125,6 @@
     });
   }
 
-  markActiveNav();
   updateScrollState();
   window.addEventListener("scroll", updateScrollState, { passive: true });
   window.addEventListener("resize", updateScrollState);

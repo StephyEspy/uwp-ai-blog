@@ -8,9 +8,9 @@ A self-coded static UWP research blog about AI preparedness in undergraduate com
 - `styles/main.css` - shared site styles
 - `scripts/main.js` - small JavaScript enhancements
 - `posts/index.html` - post listing page
-- `posts/ai-preparedness.html` - featured article draft
-- `posts/curriculum-gap.html` - article draft
-- `posts/student-response.html` - article draft
+- `posts/ai-preparedness.html` - complete research blog argument
+- `posts/curriculum-gap.html` - curriculum-to-industry gap section
+- `posts/student-response.html` - AI literacy and student response section
 - `assets/` - local visual assets
 
 ## Edit Locally

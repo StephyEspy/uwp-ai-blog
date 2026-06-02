@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="A UWP research blog on AI preparedness in undergraduate computer science education."
+    content="A UWP class research blog on AI preparedness in undergraduate computer science education."
   />
-  <title>AI Preparedness in CS Education | UWP Research Blog</title>
+  <title>AI Preparedness in Computer Science Education | UWP Research Blog</title>
   <script>
     try {
       document.documentElement.dataset.theme = localStorage.getItem("uwp-ai-theme") || "dark";
@@ -26,13 +26,12 @@
     </a>
     <div class="header-actions">
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="./index.html">Home</a>
-        <a href="./posts/index.html">Posts</a>
-        <a href="./posts/ai-preparedness.html">Featured</a>
+        <a href="#featured">Featured</a>
+        <a href="#posts">Posts</a>
         <a href="#about">About</a>
       </nav>
       <button class="theme-toggle" type="button" aria-label="Switch to light mode">
-        <span class="theme-toggle-icon" aria-hidden="true"></span>
+        <span class="theme-toggle-icon" aria-hidden="true">☀</span>
         <span class="theme-toggle-text">Light</span>
       </button>
     </div>
@@ -46,44 +45,57 @@
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">UWP Research Blog</p>
-        <h1>AI Preparedness in CS Education</h1>
+        <h1>AI Preparedness in Computer Science Education</h1>
         <p class="subtitle">
           A UWP research blog on AI preparedness in undergraduate computer
           science education.
         </p>
         <div class="hero-actions" aria-label="Featured actions">
-          <a class="button primary" href="./posts/ai-preparedness.html">Read the argument</a>
-          <a class="button secondary" href="#questions">Explore questions</a>
+          <a class="button primary" href="./posts/ai-preparedness.html">Read the full argument</a>
+          <a class="button secondary" href="#featured">Preview the thesis</a>
         </div>
       </div>
       <figure class="hero-visual">
         <img
           src="./assets/ai-curriculum-map.svg"
-          alt="Abstract editorial diagram connecting code, ethics, courses, and AI practice."
+          alt="Abstract diagram connecting code, ethics, courses, and AI practice."
         />
-        <figcaption>AI literacy as a curriculum problem, not only a tool problem.</figcaption>
+        <figcaption>
+          A class research project on what CS students still need to learn when
+          AI becomes part of ordinary software work.
+        </figcaption>
       </figure>
     </section>
 
-    <section class="featured-argument" aria-labelledby="featured-title">
-      <div class="section-kicker">Featured argument</div>
+    <section id="featured" class="featured-argument" aria-labelledby="featured-title">
+      <div class="section-kicker">Main argument</div>
       <div class="feature-layout">
         <div>
-          <h2 id="featured-title">CS programs should teach AI preparedness instead of treating AI as a shortcut to police.</h2>
+          <h2 id="featured-title">CS programs still matter, but they are not fully caught up with AI-shaped software work.</h2>
           <p>
-            Undergraduate computer science students are already using AI systems
-            to explain errors, draft code, test ideas, and study unfamiliar
-            concepts. The central question is no longer whether these tools
-            should exist in learning spaces. The better question is how students
-            can learn to use them critically, ethically, and effectively.
+            Generative AI is changing how software is written, debugged,
+            reviewed, and explored. That does not make computer science
+            education irrelevant. It exposes which parts of CS education still
+            matter most, especially foundations, reasoning, and judgment, while
+            also revealing what programs are not yet teaching clearly enough.
+          </p>
+          <p>
+            Based on current research and a personal interview with Justin Jia,
+            a Senior Software Engineer at Apple, my argument is that CS programs
+            are still valuable because they establish foundational knowledge
+            students should not dismiss. However, they are not fully caught up
+            with the industry expectation that students know how to integrate AI
+            into engineering workflows, judge AI-generated code, and navigate
+            the messy reality of large codebases that define professional
+            software engineering.
           </p>
         </div>
         <aside class="argument-note" aria-label="Core claim">
           <p class="note-label">Core claim</p>
           <p>
-            AI preparedness belongs in the curriculum because professional
-            judgment now includes knowing when automation helps, when it harms,
-            and how to verify the difference.
+            Universities should not abandon fundamentals or turn every CS class
+            into an AI tools class. They should make AI literacy and long-term
+            software judgment more visible across the curriculum.
           </p>
         </aside>
       </div>
@@ -91,81 +103,86 @@
 
     <section id="posts" class="content-section" aria-labelledby="posts-title">
       <div class="section-heading">
-        <p class="section-kicker">Latest drafts</p>
-        <h2 id="posts-title">Blog posts</h2>
+        <p class="section-kicker">Blog sections</p>
+        <h2 id="posts-title">Research posts</h2>
       </div>
 
       <div class="post-grid">
         <article class="post-card">
-          <p class="tag">Curriculum</p>
-          <h3><a href="./posts/ai-preparedness.html">Why AI Preparedness Belongs in CS Curriculum</a></h3>
+          <p class="tag">Full argument</p>
+          <h3><a href="./posts/ai-preparedness.html">AI Preparedness in Computer Science Education</a></h3>
           <p>
-            A draft argument for teaching students how to evaluate, cite, and
-            responsibly use AI tools rather than simply banning them.
+            The complete research blog draft: why CS fundamentals remain
+            valuable, where curriculum falls short, and what AI literacy should
+            mean for students.
           </p>
-          <a class="text-link" href="./posts/ai-preparedness.html">Read post</a>
+          <a class="text-link" href="./posts/ai-preparedness.html">Read full article</a>
         </article>
 
         <article class="post-card">
-          <p class="tag">Research question</p>
-          <h3><a href="./posts/curriculum-gap.html">The Curriculum Gap</a></h3>
+          <p class="tag">Curriculum and industry</p>
+          <h3><a href="./posts/curriculum-gap.html">The Curriculum-to-Industry Gap</a></h3>
           <p>
-            A placeholder analysis of the mismatch between AI-shaped software
-            practice and courses that still assume unaided work as the default.
+            A focused look at Justin Jia's point that CS foundations are useful,
+            but many courses do not prepare students for large, long-lived
+            codebases.
           </p>
-          <a class="text-link" href="./posts/curriculum-gap.html">Read post</a>
+          <a class="text-link" href="./posts/curriculum-gap.html">Read section</a>
         </article>
 
         <article class="post-card">
-          <p class="tag">Student practice</p>
-          <h3><a href="./posts/student-response.html">What Students Can Do Now</a></h3>
+          <p class="tag">Students and universities</p>
+          <h3><a href="./posts/student-response.html">AI Is Not a Replacement Brain</a></h3>
           <p>
-            A practical draft for students who want to build healthier habits
-            around prompts, verification, attribution, and learning retention.
+            A companion section on student anxiety, responsible AI use, and why
+            universities should teach AI as a workflow skill rather than a
+            substitute for thinking.
           </p>
-          <a class="text-link" href="./posts/student-response.html">Read post</a>
+          <a class="text-link" href="./posts/student-response.html">Read section</a>
         </article>
       </div>
     </section>
 
-    <section id="questions" class="content-section questions" aria-labelledby="questions-title">
+    <section class="content-section questions" aria-labelledby="questions-title">
       <div class="section-heading">
-        <p class="section-kicker">Inquiry path</p>
-        <h2 id="questions-title">Key questions</h2>
+        <p class="section-kicker">Research focus</p>
+        <h2 id="questions-title">Questions guiding the blog</h2>
       </div>
       <ol class="question-list">
-        <li>What does it mean to be prepared for AI-assisted software work?</li>
-        <li>Which CS learning outcomes change when students can consult AI tools?</li>
-        <li>How can instructors distinguish productive support from academic substitution?</li>
-        <li>What ethical responsibilities should students practice before entering industry?</li>
+        <li>How should CS students define preparedness when AI is part of software work?</li>
+        <li>Which foundations remain essential for judging AI-generated code?</li>
+        <li>How can students learn to work inside large codebases, not only short assignments?</li>
+        <li>What should universities teach so AI becomes a tool instead of a replacement brain?</li>
       </ol>
     </section>
 
     <section class="content-section reading-list" aria-labelledby="sources-title">
       <div class="section-heading">
-        <p class="section-kicker">Reading list preview</p>
-        <h2 id="sources-title">Sources to develop</h2>
+        <p class="section-kicker">Evidence base</p>
+        <h2 id="sources-title">Sources used in the argument</h2>
       </div>
       <div class="source-grid">
         <article>
-          <h3>AI literacy frameworks</h3>
+          <h3>Student anxiety</h3>
           <p>
-            Draft placeholder: scholarship on AI literacy, critical digital
-            pedagogy, and responsible computing education.
+            Farooqi et al. (2026) frames how AI is already shaping computer
+            science students' career fears and uncertainty around entry-level
+            roles.
           </p>
         </article>
         <article>
-          <h3>Academic integrity guidance</h3>
+          <h3>Developer workflow</h3>
           <p>
-            Draft placeholder: university policies and instructor statements on
-            acceptable AI use, documentation, and citation.
+            Shao and Ishengoma (2026) and Brandebusemeyer et al. (2025) support
+            the claim that AI helps most when developers review and integrate
+            its output carefully.
           </p>
         </article>
         <article>
-          <h3>Software engineering practice</h3>
+          <h3>AI literacy and curriculum</h3>
           <p>
-            Draft placeholder: industry writing on code assistants, review
-            workflows, security risks, and human oversight.
+            Cerny (2024) and Smith (2024) help define AI literacy and explain
+            why CS educators are still negotiating AI's place in the curriculum.
           </p>
         </article>
       </div>
@@ -174,14 +191,27 @@
     <section id="about" class="about-section" aria-labelledby="about-title">
       <div>
         <p class="section-kicker">About this project</p>
-        <h2 id="about-title">A class blog about learning after the tool has already arrived.</h2>
+        <h2 id="about-title">A UWP class blog about CS education after AI becomes ordinary.</h2>
       </div>
       <p>
-        This site is a self-coded static blog for a UWP class project. The
-        longer articles are clearly marked as drafts so they can be revised
-        with course sources, peer feedback, and more specific examples from
-        undergraduate computer science education.
+        This site is a self-coded static blog for a UWP class research project.
+        The argument combines secondary research with a personal interview with
+        Justin Jia, Senior Software Engineer at Apple, cited as personal
+        communication, 2026.
       </p>
+    </section>
+
+    <section class="bibliography-wrap" aria-labelledby="home-bibliography-title">
+      <details class="bibliography">
+        <summary id="home-bibliography-title">References</summary>
+        <ol>
+          <li>Brandebusemeyer, C., Schimmer, T., & Arnrich, B. (2025). Developers’ experience with generative AI – First insights from an empirical mixed-methods field study. <a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.48550/arxiv.2512.19926">https://doi.org/10.48550/arxiv.2512.19926</a></li>
+          <li>Cerny, M. (2024). University students’ conceptualisation of AI literacy: Theory and empirical evidence. Social Sciences, 13(3), Article 129. <a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.3390/socsci13030129">https://doi.org/10.3390/socsci13030129</a></li>
+          <li>Farooqi, D., Pu, G., Paudel, S., Sultana, S., & Ahmed, S. I. (2026). Job anxiety in post-secondary computer science students caused by artificial intelligence. Proceedings of the 2026 ACM Conference on Fairness, Accountability, and Transparency (FAccT ’26). <a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.48550/arxiv.2601.10468">https://doi.org/10.48550/arxiv.2601.10468</a></li>
+          <li>Shao, D., & Ishengoma, F. (2026). Empirical analysis of generative AI tool adoption in software development. Information and Software Technology, 192, Article 108036. <a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1016/j.infsof.2026.108036">https://doi.org/10.1016/j.infsof.2026.108036</a></li>
+          <li>Smith, J. M. (2024). AI in computer science education: Tool, subdomain, and wildcard. 47th MIPRO ICT and Electronics Convention (MIPRO), 1267–1271. <a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/MIPRO60963.2024.10569335">https://doi.org/10.1109/MIPRO60963.2024.10569335</a></li>
+        </ol>
+      </details>
     </section>
   </main>
 
