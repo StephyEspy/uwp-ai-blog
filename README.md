@@ -4,7 +4,7 @@ A self-coded static UWP research blog about AI preparedness in undergraduate com
 
 ## Project Structure
 
-- `index.html` - homepage
+- `index.html` - homepage with research overview and About Me section
 - `styles/main.css` - shared site styles
 - `scripts/main.js` - small JavaScript enhancements
 - `posts/index.html` - post listing page
