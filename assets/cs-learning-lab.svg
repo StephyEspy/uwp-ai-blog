@@ -1,0 +1,22 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Computer science learning lab</title>
+  <desc id="desc">An abstract classroom scene with laptops, code panels, and an AI prompt window.</desc>
+  <rect width="1200" height="720" rx="36" fill="#101817"/>
+  <path d="M108 116H1092V604H108V116Z" fill="#F4EADC"/>
+  <path d="M178 198H518V430H178V198Z" fill="#22312F"/>
+  <path d="M224 258H420" stroke="#E0B866" stroke-width="14" stroke-linecap="round"/>
+  <path d="M224 314H466" stroke="#F4EADC" stroke-width="10" stroke-linecap="round"/>
+  <path d="M224 366H394" stroke="#3FAFA4" stroke-width="10" stroke-linecap="round"/>
+  <path d="M662 196H980V430H662V196Z" fill="#22312F"/>
+  <path d="M708 258H912" stroke="#D66B4F" stroke-width="14" stroke-linecap="round"/>
+  <path d="M708 314H930" stroke="#F4EADC" stroke-width="10" stroke-linecap="round"/>
+  <path d="M708 366H870" stroke="#3FAFA4" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="349" cy="518" r="48" fill="#3FAFA4"/>
+  <circle cx="821" cy="518" r="48" fill="#E0B866"/>
+  <path d="M284 591C311 546 389 546 416 591" stroke="#1F2A2E" stroke-width="22" stroke-linecap="round"/>
+  <path d="M756 591C783 546 861 546 888 591" stroke="#1F2A2E" stroke-width="22" stroke-linecap="round"/>
+  <rect x="510" y="482" width="178" height="86" rx="20" fill="#D66B4F"/>
+  <path d="M548 526H650" stroke="#F4EADC" stroke-width="12" stroke-linecap="round"/>
+  <path d="M590 482V430" stroke="#2E7D76" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="590" cy="414" r="26" fill="#2E7D76"/>
+</svg>

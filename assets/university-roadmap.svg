@@ -1,0 +1,28 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">University AI curriculum roadmap</title>
+  <desc id="desc">A roadmap connecting fundamentals, AI literacy, code review, and long-term software maintenance.</desc>
+  <rect width="1200" height="720" rx="36" fill="#111817"/>
+  <path d="M140 570C255 414 378 441 493 322C610 200 727 220 840 145C912 97 988 91 1060 104" stroke="#3FAFA4" stroke-width="16" stroke-linecap="round"/>
+  <path d="M140 570C255 414 378 441 493 322C610 200 727 220 840 145C912 97 988 91 1060 104" stroke="#E0B866" stroke-width="5" stroke-linecap="round"/>
+  <g>
+    <circle cx="190" cy="506" r="66" fill="#F4EADC"/>
+    <path d="M161 506H219M190 477V535" stroke="#111817" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <g>
+    <circle cx="455" cy="349" r="66" fill="#D66B4F"/>
+    <path d="M422 349H488M455 316V382" stroke="#F4EADC" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <g>
+    <circle cx="708" cy="215" r="66" fill="#E0B866"/>
+    <path d="M676 215H740M708 183V247" stroke="#111817" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <g>
+    <circle cx="1008" cy="111" r="66" fill="#3FAFA4"/>
+    <path d="M976 111H1040M1008 79V143" stroke="#111817" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <rect x="116" y="590" width="220" height="50" rx="25" fill="#22312F"/>
+  <rect x="370" y="432" width="260" height="50" rx="25" fill="#22312F"/>
+  <rect x="638" y="292" width="250" height="50" rx="25" fill="#22312F"/>
+  <rect x="876" y="190" width="250" height="50" rx="25" fill="#22312F"/>
+  <path d="M160 615H292M414 457H586M682 317H844M920 215H1082" stroke="#F4EADC" stroke-width="9" stroke-linecap="round"/>
+</svg>
