@@ -15,5 +15,5 @@ A self-coded static UWP research blog about AI preparedness in undergraduate com
 
 
 ```text
-https://StephyEspy2.github.io/uwp-ai-blog/
+https://StephyEspy.github.io/uwp-ai-blog/
 ```
